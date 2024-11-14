@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:hover  {
+    opacity: 0.7;
+}
+
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 5vh;
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: absolute;
+    left: 10px;
+}
+
+.dropbtn {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    font-family: "Bebas Neue", sans-serif;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 15px;   
+}
+
+.navbar a {
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 20px;
+}
+
+.footer-secao {
+    flex: 1;
+    padding: 0 15px;
+    max-width: 200px;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#tira-o-inferno-do-sublinhado {
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+     color: #fff;
+}
+
+.footer-secao h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.footer-lema {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    padding-bottom: 50px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.div-roupa {
+    background-color: white;
+    width: 240px;
+    height: 400px;
+    display: inline-block;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: left;
+    color: black;
+    margin-left: 170px;
+    border: 1px solid;
+    margin-top: 3vh;
+}
+
+.frete {
+    font-family: "Bebas Neue", sans-serif;
+    color: green;
+}
+
+.div-roupa > h2{
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.div-roupa::before {
+    margin: 40px;
+}
+
+.p-mais-vendas {
+    color: red;
+    font-family: "Bebas Neue", sans-serif;
+    opacity: 0.7;
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+.acesso-pagina-index {
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.emoji-mais-vendas {
+    font-size: large;
+    margin-left: 25px;
+}
+
+.acesso-pagina {
+    color: gray;
+    opacity: 0.7;
+    font-size: 30px;
+    margin-left: 60px;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.acesso-pagina:hover {
+    color: black;
+    opacity: 1;
+}
+.atual-pagina {
+    color: black;
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.div-roupa-index {
+    background-color: white;
+    width: 240px;
+    height: 480px;
+    display: inline-block;
+    text-align: left;
+    color: black;
+    margin-left: 125px;
+    border: 1px solid;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.div-roupa-index > h2{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.div-roupa-index::before {
+    margin: 40px;
+}
+
+.centro {
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    background-color: white;
+}
+
+.preco {
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.tamanho{
+    display: flex;
+    list-style: none;
+}
+
+li {
+    font-family: "Bebas Neue", sans-serif;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#unico-li {
+    margin-left: none;
+}
+
+.carrinho {
+    background-color: black;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 18px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    border: 1px solid black;
+}
+
+.carrinho .button-text {
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s ease;
+}
+
+.carrinho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: transform 0.4s ease;
+    transform: translateX(0);
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.carrinho.hovered::before {
+    transform: translateX(100%);
+}
+
+.carrinho.hovered .button-text {
+    color: black;
+}
