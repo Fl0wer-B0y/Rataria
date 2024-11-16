@@ -14,6 +14,11 @@ header {
     color: #fff;
     padding: 15px;
     margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .logo {
@@ -28,6 +33,8 @@ header {
 .dropdown {
     position: absolute;
     left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .dropbtn {
@@ -70,6 +77,7 @@ header {
     justify-content: center;
     gap: 20px;
     padding-top: 15px;   
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -84,10 +92,45 @@ header {
     background-color: #444;
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .dropbtn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
 footer {
     background-color: black;
     color: #fff;
     padding: 20px;
+    align-items: center;
     display: flex;
     flex-direction: column;
     font-family: "Bebas Neue", sans-serif;
@@ -105,7 +148,7 @@ footer {
 #tira-o-inferno-do-sublinhado {
     text-decoration: none;
     font-family: "Bebas Neue", sans-serif;
-     color: #fff;
+    color: #fff;
 }
 
 .footer-secao h3{
@@ -118,7 +161,8 @@ footer {
     text-align: center;
     font-size: 14px;
     letter-spacing: 1.5px;
-    padding-bottom: 50px;
+    margin-bottom: 20px;
+    width: 100%;
     font-family: "Bebas Neue", sans-serif;
 }
 
@@ -128,35 +172,63 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
+    gap: 20px;
 }
-.div-roupa {
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer-secao {
+        max-width: 150px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-secao {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-lema {
+        font-size: 12px;
+    }
+}
+
+.div-roupa-index {
     background-color: white;
-    width: 240px;
-    height: 400px;
-    display: inline-block;
-    font-family: "Bebas Neue", sans-serif;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    height: auto;
+    display: flex;
     text-align: left;
     color: black;
-    margin-left: 170px;
+    margin: 10px 0;
     border: 1px solid;
-    margin-top: 3vh;
+    font-family: "Bebas Neue", sans-serif;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.frete {
-    font-family: "Bebas Neue", sans-serif;
-    color: green;
-}
-
-.div-roupa > h2{
-    font-family: "Bebas Neue", sans-serif;
+.div-roupa-index > h2{
     text-align: center;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
+    margin-bottom: 15px;
 }
 
-.div-roupa::before {
+.div-roupa-index::before {
     margin: 40px;
 }
 
@@ -181,6 +253,43 @@ footer {
     margin-left: 25px;
 }
 
+.div-roupa {
+    background-color: white;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    height: auto;
+    display: flex;
+    text-align: left;
+    color: black;
+    margin: 10px 0;
+    border: 1px solid;
+    font-family: "Bebas Neue", sans-serif;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.frete {
+    font-family: "Bebas Neue", sans-serif;
+    color: green;
+}
+
+.div-roupa > h2{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.div-roupa::before {
+    margin: 40px;
+}
+
+
+
 .acesso-pagina {
     color: gray;
     opacity: 0.7;
@@ -198,32 +307,6 @@ footer {
     color: black;
     font-size: 30px;
     font-family: "Bebas Neue", sans-serif;
-}
-
-.div-roupa-index {
-    background-color: white;
-    width: 240px;
-    height: 480px;
-    display: inline-block;
-    text-align: left;
-    color: black;
-    margin-left: 125px;
-    border: 1px solid;
-    font-family: "Bebas Neue", sans-serif;
-
-}
-
-.div-roupa-index > h2{
-    text-align: center;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-}
-
-.div-roupa-index::before {
-    margin: 40px;
 }
 
 .centro {
@@ -244,16 +327,16 @@ footer {
 .tamanho{
     display: flex;
     list-style: none;
+    justify-content: center;
 }
 
 li {
     font-family: "Bebas Neue", sans-serif;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 #unico-li {
-    margin-left: none;
+    margin-left: 0;
 }
 
 .carrinho {
@@ -261,15 +344,16 @@ li {
     color: #fff;
     font-family: "Bebas Neue", sans-serif;
     font-weight: bold;
-    font-size: 20px;
-    padding: 18px;
+    font-size: 18px;
+    padding: 12px;
     cursor: pointer;
     border-radius: 12px;
-    margin: 0 auto;
+    margin-top: auto;
     display: block;
+    text-align: center;
     position: relative;
     overflow: hidden;
-    transition: color 0.4s ease;
+    transition: all 0.4s ease;
     border: 1px solid black;
 }
 
@@ -300,3 +384,88 @@ li {
 .carrinho.hovered .button-text {
     color: black;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 1024px) {
+    .div-roupa-index {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    
+    .carrinho {
+        font-size: 20px;
+        padding: 16px;
+    }
+ }
+
+@media (max-width: 1024px) {
+    .div-roupa {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .carrinho {
+        font-size: 20px;
+        padding: 16px;
+    }
+}
+
+ @media (max-width: 768px) {
+    .div-roupa-index {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .carrinho {
+        font-size: 16px;
+        padding: 14px;
+    }
+ }
+
+ @media (max-width: 768px) {
+    .div-roupa {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+        margin: 0 auto;
+    }
+
+    .carrinho {
+        font-size: 16px;
+        padding: 14px;
+    }
+ }
+
+ @media (max-width: 480px) {
+    .div-roupa-index {
+        flex: 1 1 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .carrinho {
+        font-size: 20px;
+        padding: 16px;
+    }
+ }
+
+ @media (max-width: 480px) {
+    .div-roupa {
+        flex: 1 1 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .carrinho {
+        font-size: 20px;
+        padding: 16px;
+    }
+ }
